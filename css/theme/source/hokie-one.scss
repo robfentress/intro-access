@@ -1,0 +1,270 @@
+/**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+// Include theme-specific fonts
+@import url(../../lib/font/fonts.css);
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+$mainColor: #222;
+$headingColor: #222;
+$mainFontSize: 42px;
+$mainFont: "Acherus",
+Helvetica,
+sans-serif;
+$headingFont: "gineso-condensed",
+sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #c64600;
+$linkColorHover: #861f41;
+$selectionBackgroundColor: lighten( $linkColor, 25%);
+$heading1Size: 2.3em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+section.has-dark-background {
+    &,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #fff;
+    }
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+.reveal {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-transform: unset;
+    }
+    font-weight: 500;
+    .controls {
+        .navigate-left,
+        .navigate-left.enabled,
+        .navigate-left.enabled:hover {
+            border-right-color: #75787B
+        }
+        .navigate-right,
+        .navigate-right.enabled,
+        .navigate-right.enabled:hover {
+            border-left-color: #75787B
+        }
+        .navigate-up,
+        .navigate-up.enabled,
+        .navigate-up.enabled:hover {
+            border-bottom-color: #75787B
+        }
+        .navigate-down,
+        .navigate-down.enabled,
+        .navigate-down.enabled:hover {
+            border-top-color: #75787B
+        }
+    }
+    .slides {
+        .text-left {
+            text-align: left;
+        }
+        a:hover,
+        a:focus {
+            text-decoration: underline;
+        }
+        section {
+            img {
+                border: 4px solid #75787B;
+                &.white-bg {
+                    background-color: white;
+                }
+                &.borderless {
+                    background-color: white;
+                    border: none;
+                    box-shadow: none;
+                }
+            }
+            footer.ref {
+                left: 0;
+                bottom: 0;
+                clear: both;
+                font-size: small;
+                >cite {
+                    background-color: white;
+                }
+            }
+            blockquote {
+                background: #f9f9f9;
+                border-left: 10px solid #ccc;
+                text-align: left;
+                padding: 1em;
+                quotes: "\201C""\201D""\2018""\2019";
+                color: black;
+                &:before {
+                    display: block;
+                    height: 0;
+                    content: "“";
+                    margin-left: -.95em;
+                    font: italic 400%/1 Cochin, Georgia, "Times New Roman", serif;
+                    color: #222222;
+                }
+                p {
+                    font-style: normal;
+                }
+            }
+        }
+    }
+    .smaller {
+        font-size: 75%;
+    }
+}
+
+.print-pdf .reveal section footer.ref {
+    position: initial;
+}
+
+.acronym {
+    color: #CE0058;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+#speaker-controls>div.speaker-controls-notes kbd {
+    -moz-border-radius: 3px;
+    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+    -webkit-border-radius: 3px;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+    color: #333;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    line-height: 1.4;
+    margin: 0;
+    padding: .1em .6em;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.corner:before {
+    content: "";
+    position: absolute;
+    left: -.1em;
+    width: 25px;
+    height: 25px;
+    border: solid #E87722;
+    border-width: 5px 0 0 5px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+mark {
+    background: #efefaf;
+    .hljs-literal {
+        color: black;
+    }
+    .hljs-name {
+        color: #101070;
+    }
+    .hljs-tag,
+    .hljs-attr {
+        color: #1C3154;
+    }
+    .hljs-string {
+        color: #336C6C;
+    }
+}
+
+.flex-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-grid.thirds .col {
+    width: 32%;
+    figcaption {
+        font-size: 75%;
+    }
+}
+
+.flex-grid.half .col {
+    width: 50%;
+}
+
+@media (max-width: 400px) {
+    .flex-grid {
+        display: block;
+    }
+}
+
+.logo {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2000;
+}
+
+.print-pdf .logo {
+    position: absolute;
+    right: 20px;
+    left: inherit;
+}
+
+@media print {
+    .no-print,
+    .no-print * {
+        display: none !important;
+    }
+}
+
+.view-switch {
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    ;
+    z-index: 1000;
+    a {
+        padding: .5rem;
+        img {
+            height: 1.5rem;
+            width: 1.5rem;
+        }
+    }
+}
+
+.in-print {
+    display: none;
+}
+
+.in-pres {
+    display: inline-block;
+}
+
+.unprocessed {
+    display: inline-block;
+}
