@@ -355,9 +355,11 @@
                                 </ol>
                             </li>
                             <li>Reveal next fragment</li>
-                            <li><b>Read:</b> Section 508 of the Rehabilitation Act defines requirements for information technology accessibility (including, but not limited to, web accessibility) for Federal agencies and those receiving federal funds. If
-                                Section 504 is the "what" you could view Section 508 as the "how", establishing specific guidelines for how to ensure that information technology does not needlessly present a barrier. For the web, these requirements have
-                                been harmonized with the international standard for web accessibility called the Web Content Accessibility Guidelines, which we'll learn a little more about in a minute.
+                            <li><b>Read:</b> Section 508 of the Rehabilitation Act defines requirements for information and communications technology accessibility (including, but not limited to, web accessibility) for Federal agencies and those receiving
+                                federal funds. If Section 504 is the "what" you could view Section 508 as the "how", establishing specific guidelines for how to ensure that information technology does not needlessly present a barrier. For the web, these
+                                requirements have been harmonized with the international standard for web accessibility called the Web Content Accessibility Guidelines, which we'll learn a little more about in a minute. Unlike Section 504, Section 508
+                                protections do not automatically apply to all institutions that receive federal aid, however, in our circumstance at Virginia Tech, the Department of Education does consider that we must meet the standard because of the
+                                <a href="https://www.usg.edu/siteinfo/higher_education_the_americans_with_disabilities_act_and_section_508">particular types of aid we receive</a> (Assistive Technology Act Funding).
                             </li>
                             <li>Reveal next fragment</li>
                             <li><b>Read:</b> The Americans with Disabilities Act (ADA) seeks to ensure equal access to programs, services, and activities for people with disabilities.
@@ -375,7 +377,7 @@
                             <li>Reveal next fragment</li>
                             <li><b>Read:</b> Depending on your country, state, or locality, there may be additional legal requirements. For instance, in Virginia, the Information Technology Access Act, among other things, requires that state agencies ensure
                                 that any information technology they use be accessible to the blind and visually impaired.</li>
-                            <li>If people are interested, you can read directly the relevant parts of the law:
+                            <li><b>Optional:</b> If people are interested, you can read directly the relevant parts of the law:
                                 <ol>
                                     <li>
                                         <blockquote>
@@ -438,6 +440,22 @@
                     </aside>
                 </section>
                 <section>
+                    <h2>Wicky-wicky-WCAG</h2>
+                    <iframe title="Web Accessibility WCAG Theme Song video" width="560" height="315" src="https://www.youtube.com/embed/-IWBT4Tk3t0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    <aside role="note" class="notes">
+                        <ol>
+                            <li><b>Read:</b> In addition to laws governing accessibility, there are defined standards for what it means to be "accessible".</li>
+                            <li><b>Read:</b> The first of these is the Web Content Accessibility Guidelines, which you'll hear referred to as wick-cag, way-cag, or wuh-cag, depending on whom you talk to.</li>
+                            <li>WCAG is the internationally-recognized standard that explains how to make web content more accessible to people with disabilities and it is <em>really</em> cool. Don't believe me? It has its own theme song!</li>
+                            <li><b>Play song</b></li>
+                            <li>It was developed by the Web Accessibility Initiative of the World Wide Web Consortium, which is the same overarching organization responsible for HTML and other web standards.</li>
+                            <li>Reveal next fragment, <b>WCAG 2.1</b>.</li>
+                            <li><b>Read:</b> On June 5, 2018 WCAG 2.1 came out, which is a significant update to the standard, expanding provisions for <strong>mobile, low vision, and cognitive and learning disabilities</strong>.</li>
+                        </ol>
+                    </aside>
+                </section>
+                <section>
                     <h2>Web Content Accessibility Guidelines</h2>
                     <ul>
                         <li>4 Design Principles: <br>
@@ -457,14 +475,21 @@
                     </ul>
                     <aside role="note" class="notes">
                         <ol>
-                            <li><b>Read:</b> The most important standrd of the ones I listed on the previous slides is the Web Content Accessibility Guidelines, so let's spend a little time digging into what that
+                            <li><b>Read:</b> The Web Content Accessibility Guidelines are organized by four design principles, Perceivable, Operable, Understandable, and Robust, which form the nice acronym, POUR. Breaking that out means that:
+                                <ul>
+                                    <li>Information and user interface components must be presentable to users in ways they can perceive;</li>
+                                    <li>User interface components and navigation must be operable;</li>
+                                    <li>Information and operation of the user interface must be understandable; and</li>
+                                    <li>Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies.</li>
+                                </ul>
                             </li>
-                            <li></li>
-                            <li><b>Perceivable:</b> Information and user interface components must be presentable to users in ways they can perceive.</li>
-                            <li><b>Operable:</b> User interface components and navigation must be operable.</li>
-                            <li><b>Understandable:</b> Information and the operation of user interface must be understandable.</li>
-                            <li><b>Robust:</b> Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies.</li>
-                            </ul>
+                            <li><b>Reveal next fragment, Contain 12 Guidelines</b></li>
+                            <li><b>Read:</b> Under each Principle, there are Guidelines.</li>
+                            <li><b>Reveal next fragment, Testable success criteria</b></li>
+                            <li><b>Read:</b> Under each Guideline, in turn, there are a number of specific, testable success criteria.</li>
+                            <li><b>Reveal next fragment, on Criteria</b></li>
+                            <li><b>Read:</b> Each success criteria is assigned a conformance level, A, AA, or AAA. If your web page meets all of the success criteria that are listed as AA, you can claim WCAG AA conformance for that page.</li>
+                        </ol>
                     </aside>
                 </section>
                 <section>
@@ -474,11 +499,11 @@
                             <b><span class="acronym">Principle</span> 1 – Perceivable:</b> Information and user interface components must be presentable to users in ways they can perceive.
                             <ul>
                                 <li class="fragment">
-                                    <b><span class="acronym">Guideline</span> 1.3 – Adaptable:</b> Create content that can be presented in different ways (for example simpler layout) without losing information or structure.
+                                    <b><span class="acronym">Guideline</span> 1.2 – Time-based Media:</b> Provide alternatives for time-based media.
                                     <ul>
                                         <li class="fragment">
-                                            <b><span class="acronym">Success Criterion</span> 1.3.1 – Info and Relationships (Level A):</b> Information, structure, and relationships conveyed through presentation can be programmatically determined or are
-                                            available in text.
+                                            <b><span class="acronym">Success Criterion</span> 1.2.2 – Captions (Prerecorded) (Level A):</b> Captions are provided for all prerecorded audio content in synchronized media, except when the media is a media
+                                            alternative for text and is clearly labeled as such.
                                         </li>
                                     </ul>
                                 </li>
@@ -486,9 +511,40 @@
                         </li>
                     </ul>
                     <aside role="note" class="notes">
-                        Here is an example of the hierarchy of Principles, Guidelines, and Success Criteria. The Principle is that users must be able to perceive things. A Guideline within that principle is that the user should be able adapt the content so it can be viewed in
-                        different ways And a specific Success Criterion is that the content be structured using appropriate semantic elements so that the information about and relationships between elements on the page don't depend on specific sensory
-                        and physical abilities in order to perceive.
+                        <ol>
+                            <li><b>Read:</b> Here is an example of the hierarchy of Principles, Guidelines, and Success Criteria that might help make it a little clearer.</li>
+                            <li><b>Reveal fragment, Principle</b></li>
+                            <li><b>Read:</b> In this case, the Principle is that users must be able to perceive things.</li>
+                            <li><b>Reveal fragment, Guideline</b></li>
+                            <li><b>Read:</b> A Guideline within that Principle is that any time-based media must have alternatives.</li>
+                            <li><b>Reveal fragment, Success Criterion</b></li>
+                            <li><b>Read:</b> And a Success Criterion under that Guideline provides an example of a specific kind of time-based media and the alternative that must be provided for it. In this instance, the Success Criterion stipulates that
+                                captions have to be provided for prerecorded video.</li>
+                        </ol>
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Other Accessibility Standards</h2>
+                    <ul>
+                        <li class="fragment"><a href="https://www.w3.org/WAI/standards-guidelines/aria/#introduction" target="_blank">Web Accessibility Initiative – Accessible Rich Internet Applications 1.1</a> (WAI-ARIA) </li>
+                        <li class="fragment"><a href="https://www.w3.org/WAI/standards-guidelines/atag/" target="_blank">Authoring Tool Accessibility Guidelines 2.0</a> (ATAG)</li>
+                    </ul>
+                    <aside role="note" class="notes">
+                        <ol>
+                            <li><b>Read:</b> WCAG isn't the only standard having to do with accessibility.</li>
+                            <li>Reveal next fragment, <b>WAI-ARIA.</b></li>
+                            <li>Web Accessibility Initiative – Accessible Rich Internet Applications, which you'll usually just hear called ARIA, is a technical specification published by the World Wide Web Consortium (W3C) that describes how to increase
+                                the accessibility of web pages that have more application-like functionality. For instance, it is now possible using Javascript to create custom-coded user interface controls like interactive menus or tree views that are
+                                not a part of the HTML specification, and often you'll see content on pages these days that updates in response to user actions without having to load a whole new page. Unless you properly set certain roles, states, and
+                                properties, as specified in the ARIA standard, assistive technologies like screen-reading software won't be able to give users information they need to interact with those controls and won't inform users of when things
+                                change on the page.</li>
+                            <li>Reveal next fragment, <b>ATAG</b>.</li>
+                            <li><b>Read:</b>Beyond ensuring that web content is accessible, it is important that the tools used to create that content are, themselves, accessible, which is what the Accessible Tool Authoring Guidelines, abbreviated as ATAG,
+                                are designed to address.</li>
+                            <li>ATAG provides guidelines for designing web content <strong>authoring tools</strong> that are both more <strong>accessible</strong> to authors with disabilities (Part A) and designed to enable, support, and promote the <strong>production of more accessible web content</strong>                                by all authors (Part B).</li>
+                        </ol>
+
                     </aside>
                 </section>
             </section>
@@ -503,46 +559,26 @@
                     <li class="fragment">Multiple</li>
                 </ul>
                 <aside role="note" class="notes">
-                    <ul>
-                        <li>Visual
-                            <ul>
-                                <li>Blindness</li>
-                                <li>Low vision</li>
-                                <li>Color blindness</li>
-                            </ul>
-                        </li>
-                        <li>Auditory
-                            <ul>
-                                <li>Deafness</li>
-                                <li>Hard of hearing</li>
-                            </ul>
-                        </li>
-                        <li>Motor
-                            <ul>
-                                <li>Fine motor control</li>
-                                <li>Spasticity</li>
-                                <li>Paralysis</li>
-                                <li>Fatigue</li>
-                                <li>inability to use mouse, slow response times</li>
-                            </ul>
-                        </li>
-                        <li>Cognitive
-                            <ul>
-                                <li>Memory</li>
-                                <li>Problem-solving</li>
-                                <li>Attention</li>
-                                <li>Reading, linguistic, and verbal comprehension</li>
-                                <li>Math comprehension</li>
-                                <li>Visual comprehension</li>
-                            </ul>
-                        </li>
-                        <li>Seizure</li>
-                        <li>Multiple
-                            <ul>
-                                <li>Deaf-blind</li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <ol>
+                        <li><b>Read:</b> This workshop is going to talk about web accessibility primarily from the perspective of how failure to do certain things will affect people with different kinds of disabilities. I want to state up front that I'm not
+                            doing this to try to invoke pity, but, rather, because it is hard to follow the rules described in accessibility standards if you don't understand why they are there or who specifically will be most affected by the choices
+                            you make. As I hope I've made clear, making the web more accessible benefits everyone, but for some people it doesn't just make things better, it makes them possible. </li>
+                        <li>There are different ways to categorize disability, but here is a one high-level overview that I hope will help organize the complexity. </li>
+                        <li><b>Reveal fragment, Visual</b></li>
+                        <li><b>Read:</b> There are visual disabilities, which include things like blindness, low vision, and color blindness.</li>
+                        <li><b>Reveal fragment, Auditory</b></li>
+                        <li><b>Read:</b> There are auditory disabilities, which include deafness and hard-of-hearing.</li>
+                        <li><b>Reveal fragment, Motor</b></li>
+                        <li><b>Read:</b> There are motor disabilities, which can include problems with gross or fine motor control, spasticity, paralysis, or fatigue.</li>
+                        <li><b>Reveal fragment, Cognitive</b></li>
+                        <li><b>Read:</b> There are cognitive disabilities. These can involve problems with memory; problem-solving; attention; reading, linguistic, and verbal comprehension; math comprehension; or visual comprehension.</li>
+                        <li><b>Reveal fragment, Speech</b></li>
+                        <li><b>Read:</b> There are speech disabilities.</li>
+                        <li><b>Reveal fragment, Seizures</b></li>
+                        <li><b>Read:</b> And disabilities involving seizures.</li>
+                        <li><b>Reveal fragment, Multiple</b></li>
+                        <li><b>Read:</b> Finally, it worth considering that people can have more than one of these disabilities and that the effects of such combinations of disabilites can be more than the sum of their parts.</li>
+                    </ol>
                 </aside>
             </section>
 
@@ -562,11 +598,25 @@
                         <li class="fragment">iOS: <a href="https://webaim.org/articles/voiceover/#mobile" target="_blank">VoiceOver</a> with Safari</li>
                         <li class="fragment">Android: <a href="https://developer.paciellogroup.com/blog/2015/10/accessibility-testing-with-android-talkback/">Talkback</a> with Firefox</li>
                     </ul>
+                    <aside role="note" class="notes">
+                        <ol>
+                            <li><b>Read:</b> </li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ol>
+                    </aside>
                 </section>
                 <section>
                     <h2>What's going on?</h2>
                     <iframe title="Just Audio" width="560" height="315" src="https://www.youtube.com/embed/mrxO-XlgQ1k" allow="autoplay; encrypted-media" allowfullscreen class="stretch" aria-describedby="nodesc"></iframe>
-                    <div style="display:none" id="nodesc">No audio descriptions intentionally. Audio-described version is under section with the heading "Better?"</div>
+                    <div class="desc" id="nodesc">No audio descriptions intentionally. Audio-described version is under section with the heading "Better?"</div>
                     <aside role="note" class="notes">
                         <ol>
                             <li><b>Read:</b> People with disabilities are neither victims nor heroes, but being aware of the diversity of your audience can help you design digital materials that convey your message effectively to the broadest range of users.</li>
@@ -1125,19 +1175,19 @@
                             <figure><img src="img/376px-Eye_disease_simulation,_age-related_macular_degeneration.jpg" alt="Age-related Macular Degeneration Simulation" width="376" height="251" class="max-wide" aria-describedby="maculardesc" />
                                 <figcaption>Macular Degeneration</figcaption>
                             </figure>
-                            <div id="maculardesc" style="display:none">2 boys, one with arm around the shoulder of the other. Both hold soccer balls. Where the boys faces would appears towards the center of the visual field is a blurred grayish patch.</div>
+                            <div id="maculardesc" class="desc">2 boys, one with arm around the shoulder of the other. Both hold soccer balls. Where the boys faces would appears towards the center of the visual field is a blurred grayish patch.</div>
                         </div>
                         <div class="col fragment">
                             <figure><img src="img/376px-Eye_disease_simulation,_glaucoma.jpg" alt="Glaucoma Simulation" width="376" height="251" class="max-wide" aria-describedby="glaucomadesc" />
                                 <figcaption>Glaucoma</figcaption>
                             </figure>
-                            <div id="glaucomadesc" style="display:none">2 smiling boys, one with arm around the shoulder of the other. Both hold soccer balls. The periphery of the picture, around the faces of the smiling boys, center, gradually fades to black.</div>
+                            <div id="glaucomadesc" class="desc">2 smiling boys, one with arm around the shoulder of the other. Both hold soccer balls. The periphery of the picture, around the faces of the smiling boys, center, gradually fades to black.</div>
                         </div>
                         <div class="col fragment">
                             <figure><img src="img/cataract-h251.jpg" alt="Glaucoma Simulation" width="376" height="251" class="max-wide" aria-describedby="cataractdesc" />
                                 <figcaption>Cataract</figcaption>
                             </figure>
-                            <div id="cataractdesc" style="display:none">2 smiling boys, one with arm around the shoulder of the other. Both hold soccer balls. The entirety of the picture is blurry.</div>
+                            <div id="cataractdesc" class="desc">2 smiling boys, one with arm around the shoulder of the other. Both hold soccer balls. The entirety of the picture is blurry.</div>
                         </div>
                     </div>
                     <aside role="note" class="notes">
@@ -1239,7 +1289,7 @@
                         </div>
                         <div class="col">
                             <img src="img/ucda/color-blind/test-plate.png" alt="Ishihara color test plate" class="white-bg max-wide borderless" aria-labelledby="ishiharaDesc">
-                            <span style="display:none" id="ishiharaDesc">With properly configured computer displays, people with normal vision should see the number "74". Many people who are color blind see it as "21", and those with total color blindness may not see any numbers.</span>
+                            <span class="desc" id="ishiharaDesc">With properly configured computer displays, people with normal vision should see the number "74". Many people who are color blind see it as "21", and those with total color blindness may not see any numbers.</span>
                             <footer class="ref"><cite>Picture:
 																								Author Unknown /
 																								<a href="https://en.wikipedia.org/wiki/Color_blindness#/media/File:Ishihara_9.png">Ishihara Plate 9</a> /
@@ -1558,8 +1608,8 @@
                         <li><a href="https://www.w3.org/WAI/demos/bad/">Before and After Demonstration</a></li>
                         <li>Office Supply
                             <ul>
-                                <li><a href="http://www.dhs.state.il.us/accessibility/tests/officesupply/home-b.html">Before</a></li>
-                                <li><a href="http://www.dhs.state.il.us/accessibility/tests/officesupply/home-a.html">After</a></li>
+                                <li><a href="http://www.dhs.state.il.us/accessibility/tests/officesupply/home-inaccessible.html">Before</a></li>
+                                <li><a href="http://www.dhs.state.il.us/accessibility/tests/officesupply/home-accessible.html">After</a></li>
                             </ul>
                         </li>
                     </ul>
