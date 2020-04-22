@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Table Example</title>
+    <style>
+        table {
+            max-width: 1366px;
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            padding: .5em;
+            border: 1px solid black;
+        }
+        
+        tbody tr:nth-child(even) {
+            background-color: #dcdcdc;
+        }
+        
+        thead tr td:first-child {
+            background-color: white;
+            color: black;
+        }
+        
+        th {
+            background-color: #696969;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Table Example</h1>
+    <p id="atDesc">Where to find different kinds of assistive technologies (AT) on different operating systems (OS), with row headers being the AT, and column headers being the OS.</p>
+    <table aria-describedby="atDesc">
+        <caption>Assistive Technologies Matrix</caption>
+        <thead>
+            <tr>
+                <td></td>
+                <th scope="col">macOS</th>
+                <th scope="col">Windows</th>
+                <th scope="col">iOS</th>
+                <th scope="col">Android</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Magnification</th>
+                <td>Accessibility &rarr; Zoom</td>
+                <td>Ease of Access &rarr; Magnifier</td>
+                <td>Accessibility &rarr; Magnifier</td>
+                <td>Accessibility &rarr; Magnification</td>
+            </tr>
+            <tr>
+                <th scope="row">High Contrast</th>
+                <td>Accessibility &rarr; Display</td>
+                <td>Ease of Access &rarr; High Contrast</td>
+                <td>Accessibility &rarr; Display &amp; Text Size</td>
+                <td>Accessibility &rarr; High contrast text</td>
+            </tr>
+            <tr>
+                <th scope="row">Text-to-Speech</th>
+                <td>Accessibility &rarr; Speech</td>
+                <td>Ease of Access &rarr; Narrator</td>
+                <td>Accessibility &rarr; Spoken Content</td>
+                <td>Accessibility &rarr; Select to speak</td>
+            </tr>
+            <tr>
+                <th scope="row">Screen Reading</th>
+                <td>Accessibility &rarr; VoiceOver</td>
+                <td>Ease of Access &rarr; Narrator</td>
+                <td>Accessibility &rarr; VoiceOver</td>
+                <td>Accessibility &rarr; TalkBack</td>
+            </tr>
+            <tr>
+                <th scope="row">Voice Control</th>
+                <td>Accessibility &rarr; Voice Control</td>
+                <td>Ease of Access &rarr; Speech Recognition</td>
+                <td>Accessibility &rarr; Voice Control</td>
+                <td>Accessibility &rarr; Voice Access</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

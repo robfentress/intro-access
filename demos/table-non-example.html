@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Table Non-Example</title>
+    <style>
+        table {
+            max-width: 1366px;
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        
+        td {
+            padding: .5em;
+            border: 1px solid black;
+        }
+        
+        thead tr td,
+        tbody tr td:first-child {
+            background-color: #696969;
+            color: white;
+        }
+        
+        thead tr td:first-child {
+            background-color: white;
+            color: black;
+        }
+        
+        tbody tr:nth-child(even) {
+            background-color: #dcdcdc;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Table Non-Example</h1>
+    <table>
+        <thead>
+            <tr>
+                <td></td>
+                <td><b>macOS</b></td>
+                <td><b>Windows</b></td>
+                <td><b>iOS</b></td>
+                <td><b>Android</b></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>Magnification</b></td>
+                <td>Accessibility &rarr; Zoom</td>
+                <td>Ease of Access &rarr; Magnifier</td>
+                <td>Accessibility &rarr; Magnifier</td>
+                <td>Accessibility &rarr; Magnification</td>
+            </tr>
+            <tr>
+                <td><b>High Contrast</b></td>
+                <td>Accessibility &rarr; Display</td>
+                <td>Ease of Access &rarr; High Contrast</td>
+                <td>Accessibility &rarr; Display &amp; Text Size</td>
+                <td>Accessibility &rarr; High contrast text</td>
+            </tr>
+            <tr>
+                <td><b>Text-to-Speech</b></td>
+                <td>Accessibility &rarr; Speech</td>
+                <td>Ease of Access &rarr; Narrator</td>
+                <td>Accessibility &rarr; Spoken Content</td>
+                <td>Accessibility &rarr; Select to speak</td>
+            </tr>
+            <tr>
+                <td><b>Screen Reading</b></td>
+                <td>Accessibility &rarr; VoiceOver</td>
+                <td>Ease of Access &rarr; Narrator</td>
+                <td>Accessibility &rarr; VoiceOver</td>
+                <td>Accessibility &rarr; TalkBack</td>
+            </tr>
+            <tr>
+                <td><b>Voice Control</b></td>
+                <td>Accessibility &rarr; Voice Control</td>
+                <td>Ease of Access &rarr; Speech Recognition</td>
+                <td>Accessibility &rarr; Voice Control</td>
+                <td>Accessibility &rarr; Voice Access</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
