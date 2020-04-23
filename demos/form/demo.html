@@ -20,10 +20,8 @@
                 changeMonth: true,
                 changeYear: true
             });
-        });
-    </script>
-    <script>
-        $(function() {
+
+
             $('.number').autotab({
                 filter: 'number',
                 tabOnSelect: true
@@ -32,14 +30,19 @@
                 filter: 'number',
                 tabOnSelect: true
             });
-        });
-    </script>
 
-    <script>
-        // Timeout after 20 minutes
-        window.setTimeout(function() {
-            window.location.href = 'timeout.html';
-        }, 1200000)
+
+            $('#languages a').click(function(e) {
+                e.preventDefault();
+                alert('Imagine this takes you to a version of the page in another language.');
+            });
+
+
+            // Timeout after 20 minutes
+            window.setTimeout(function() {
+                window.location.href = 'timeout.html';
+            }, 1200000)
+        });
     </script>
 
     <!-- Editor code lifted from https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Editable_content -->
@@ -66,10 +69,8 @@
         }
 
         function formatDoc(sCmd, sValue) {
-            //if (validateMode()) {
             document.execCommand(sCmd, false, sValue);
             oDoc.focus();
-            //}
         }
 
         function validate() {
@@ -191,10 +192,35 @@
         select:focus {
             outline: none;
         }
+        
+        #languages {
+            position: absolute;
+            right: 0;
+        }
+        
+        #languages ul {
+            display: inline;
+            padding: 0;
+        }
+        
+        #languages li {
+            display: inline;
+            padding: 0 .5em 0 .5em;
+        }
     </style>
 </head>
 
 <body onload="initDoc();">
+    <div id="languages"> Language:
+        <ul>
+            <li>
+                <a href="german.html"><img src="img/german-flag.png" alt="Seite auf Deutsch anzeigen" width="24" height="15"></a>
+            </li>
+            <li>
+                <a href="spanish.html"><img src="img/spanish-flag.png" alt="ver página en español" width="24" height="15"></a>
+            </li>
+        </ul>
+    </div>
     <h1>Create Account</h1>
     <p><b>Personal Information</b></p>
     <form name="compForm" method="post" action="sample.php" onsubmit="if(validateMode()){this.myDoc.value=oDoc.innerHTML;return true;}return false;">
