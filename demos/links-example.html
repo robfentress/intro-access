@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links (Example)</title>
+    <style>
+        html,
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 14px;
+        }
+        
+        ul {
+            display: block;
+            padding-left: 0;
+        }
+        
+        .item {
+            display: block;
+            border-bottom: 1px solid lightgray;
+            padding-bottom: .5em;
+            margin-bottom: 1em;
+            margin-left: 1em;
+        }
+        
+        .item::before {
+            position: absolute;
+            margin-left: -1em;
+            content: "»";
+            color: maroon;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Learn more about</h1>
+    <ul>
+        <li class="item"><a href="https://en.wikipedia.org/wiki/Web_Content_Accessibility_Guidelines">Web Content Accessibility Guidelines (WCAG)</a></li>
+        <li class="item"><a href="https://en.wikipedia.org/wiki/Web_Accessibility_Initiative#Authoring_Tool_Accessibility_Guidelines_(ATAG)">Authoring Tool Accessibility Guidelines (ATAG)</a></li>
+        <li class="item"><a href="https://en.wikipedia.org/wiki/UAAG">User Agent Accessibility Guidelines (UAAG)</a></li>
+    </ul>
+</body>
+
+</html>

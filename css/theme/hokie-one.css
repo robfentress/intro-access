@@ -454,3 +454,7 @@ mark {
 
 .desc {
   display: none; }
+
+.link {
+  background-color: yellow;
+  color: blue; }

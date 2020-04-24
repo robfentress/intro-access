@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links (Non-Example)</title>
+    <style>
+        html,
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 14px;
+        }
+        
+        .item {
+            display: flex;
+            border-bottom: 1px solid lightgray;
+            padding-bottom: .5em;
+            margin-bottom: 1em;
+            margin-left: 1em;
+        }
+        
+        .item>div:first-child {
+            width: 24em;
+            padding-right: 1em;
+        }
+        
+        .item::before {
+            position: absolute;
+            margin-left: -1em;
+            content: "»";
+            color: maroon;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Learn more about</h1>
+    <div class="item">
+        <div>Web Content Accessibility Guidelines (WCAG): </div>
+        <div><a href="https://en.wikipedia.org/wiki/Web_Content_Accessibility_Guidelines">click here</a></div>
+    </div>
+    <div class="item">
+        <div>Authoring Tool Accessibility Guidelines (ATAG): </div>
+        <div><a href="https://en.wikipedia.org/wiki/Web_Accessibility_Initiative#Authoring_Tool_Accessibility_Guidelines_(ATAG)">click here</a></div>
+    </div>
+    <div class="item">
+        <div>User Agent Accessibility Guidelines (UAAG): </div>
+        <div><a href="https://en.wikipedia.org/wiki/UAAG">click here</a></div>
+    </div>
+</body>
+
+</html>
