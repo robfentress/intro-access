@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <style>
+        /* GLOBAL STYLES */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+        }
+        
+        .wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 3em 1.5em;
+        }
+        
+        .siteName a {
+            font-size: 3em;
+            text-decoration: none;
+        }
+        
+        .siteName a:hover {
+            text-decoration: underline;
+        }
+        
+        .mainMenu a {
+            padding: 20px 5px;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .mainMenu a:hover {
+            background: #f6f6f6;
+        }
+        
+        .mainMenu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+        }
+        
+        .row {
+            display: flex;
+        }
+        
+        @media all and (min-width: 769px) {
+            .content {
+                padding-right: 1em;
+            }
+        }
+        
+        @media all and (max-width: 768px) {
+            .row {
+                flex-wrap: wrap;
+            }
+        }
+        
+        @media all and (max-width: 480px) {
+            .mainMenu ul {
+                flex-wrap: wrap;
+            }
+            .mainMenu li {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="siteName"><a href="index.html">My Site</a></div>
+            <p>A blurb about my site</p>
+        </header>
+        <nav class="mainMenu">
+            <h2>Site Navigation</h2>
+            <ul>
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="products.html">Products</a>
+                </li>
+                <li>
+                    <a href="give.html">Give</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+        <form role="search" method="post" action="search.php">
+            <h2>Site Search</h2>
+            <label for="query">Search</label>
+            <input type="search" name="query" id="query">
+            <button type="submit">Submit</button>
+        </form>
+        <div class="row">
+            <main class="content">
+                <h1>My Page</h1>
+                <p>But I must explain to you how all this mistaken idea of denouncing of a pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the
+                    master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
+                    Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which
+                    of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain
+                    that produces no resultant pleasure?
+                </p>
+            </main>
+            <aside class="supplemental">
+                <h2>Supplemental</h2>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                </ul>
+            </aside>
+        </div>
+        <footer>
+            <p>©&nbsp;2020 Some fictional company. All rights reserved (not really).</p>
+        </footer>
+    </div>
+</body>
+
+</html>

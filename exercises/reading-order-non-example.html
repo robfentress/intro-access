@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Order (Non-Example)</title>
+    <style>
+        .flexed {
+            font-size: 2em;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .flexed .item {
+            padding: .5em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Reading Order (Non-Example)</h1>
+    <div class="flexed">
+        <span class="item" style="order: 3;"> Man </span>
+        <span class="item" style="order: 2"> Bites </span>
+        <span class="item" style="order: 1;"> Dog </span>
+    </div>
+</body>
+
+</html>
